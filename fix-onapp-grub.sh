@@ -6,3 +6,5 @@ mount /dev/vda1 /mnt && mount --bind /proc /mnt/proc/ && mount --bind /dev /mnt/
 sed -i 's/GRUB_ENABLE_BLSCFG.*/GRUB_ENABLE_BLSCFG=false/' /etc/default/grub
 grub2-mkconfig -o /boot/grub2/grub.cfg
 cd / && umount /mnt/proc && umount /mnt/dev && umount /mnt/sys && umount /mnt
+
+echo "Reparo de GRUB concluído"
